@@ -1,9 +1,14 @@
 {% extends 'main/base.html' %}
 
+{% block style %}
+<link rel="stylesheet" href="main/static/css/home.css">
+{% endblock %}
+
 {% block content %}
-
-<p>
-    Статичная welcome-страничка.
-</p>
-
+<figure>
+    <blockquote cite="https://www.goodreads.com/quotes/4590-without-music-life-would-be-a-mistake">
+        <p>Without music, life would be a mistake.</p>
+    </blockquote>
+    <figcaption>—Friedrich Nietzsche, <cite>Twilight of the Idols</cite></figcaption>
+</figure>
 {% endblock %}

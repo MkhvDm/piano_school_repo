@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+
+body {
+    background-color: #d7d7e4;
+    font-family: 'Benne', serif;
+    margin: 5% auto;
+    width: 80%;
+}
+
+.page-header {
+    font-size: xx-large;
+}
+
+a {
+    color: #cc7400;
+    text-decoration: none;
+}
+a:visited {
+    color: #494949;
+}
+a:active {
+    color: #cc7400;
+}
