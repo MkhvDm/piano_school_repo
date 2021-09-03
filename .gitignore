@@ -1,4 +1,5 @@
 test_ignore.txt
+workspace.code-workspace
 /.idea
 
 *.log
