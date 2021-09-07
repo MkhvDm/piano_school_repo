@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
 
 body {
-    background-color: #d7d7e4;
+    background-color: #dddddd;
     font-family: 'Benne', serif;
-    margin: 5% auto;
-    width: 80%;
+    padding: 0 0;
+    margin: auto;
+    width: 100%;
 }
 
 .page-header {
+    margin: auto;
+    padding: auto;
     font-size: xx-large;
+    background-color: #cfcfd1;
 }
 
 a {
