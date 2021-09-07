@@ -9,10 +9,21 @@ body {
 }
 
 .page-header {
-    margin: auto;
-    padding: auto;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
     font-size: xx-large;
     background-color: #cfcfd1;
+
+    position: fixed;
+    z-index: 1000;
+}
+.content-container {
+    padding-top: 109px;
+}
+
+.page-header > h3 {
+    margin: 0;
 }
 
 a {
