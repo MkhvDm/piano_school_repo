@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-def welcome_page(request):
-    return HttpResponse("<h1/>WELCOME PAGE<h1>")
+def trial(request):
+    return HttpResponse("<h1/>Trial lesson<h1>")
 
 
 def biography(request):

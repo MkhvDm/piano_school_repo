@@ -1,3 +1,20 @@
+
+.piano-image {
+    display: inline-block;
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+.piano-image > img {
+    height: 400px;
+}
+
+.quote-div {
+    display: inline-block;
+    padding-right: 3%;
+    padding-left: 60px;
+}
+
 figure {
     float: right;
 }
@@ -20,3 +37,4 @@ blockquote p::before {
 blockquote p::after {
     content: '\201D';
 }
+
