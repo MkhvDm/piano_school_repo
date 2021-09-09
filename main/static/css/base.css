@@ -11,7 +11,7 @@ body {
 .page-header {
     width: 100%;
     margin: 0;
-    padding: 20px;
+    padding: 10px;
     font-size: xx-large;
     background-color: #cfcfd1;
 
@@ -19,42 +19,30 @@ body {
     z-index: 1000;
 }
 .content-container {
-    padding-top: 109px;
+    padding-top: 89px;
 }
 
 .nav-bar > h3 {
     margin: 0;
+    padding-right: 170px;
+    padding-left: 10px;
     /* display: block; */
     display: inline-block;
 }
 
 .nav-bar > h5 {
     margin: 0;
-    /* display: block; */
+    padding-left: 10px;
     display: inline-block;
 }
-
-
-/* .nav-bar {
-    display: block;
-} */
-.trial-lesson {
-    display: inline-block;
-}
-
-.trial-lesson > button {
-    border: none;
-    background-color: #cfcfd1;
-}
-
 
 
 a {
-    color: #cc7400;
+    color: #505050;
     text-decoration: none;
 }
-a:visited {
-    color: #494949;
+a:hover{
+    color: #754200;
 }
 a:active {
     color: #cc7400;
