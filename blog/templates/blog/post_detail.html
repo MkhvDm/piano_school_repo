@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div id="blog-conteiner">
+        <div class="post">
+            <h1 class="post_title">
+                {{ post.title }} 
+                {% if user.is_superuser %}
+                    <a class="post-edit-button" href="{% url 'post_edit' pk=post.pk %}">
+                        <img src="{% static 'img/edit.png' %}" width="40" height="40" alt="edit">
+                    </a>
+                {% endif %}
+            </h1>
+            
+            
+            {% if post.published_date %}
+                <p class="post_text">{{ post.text|linebreaksbr }}</p>
+                <div class="date">
+                    <p class="pub_date">published: {{ post.published_date }}</p>
+                </div>
+            {% else %}
+                <p>post in process...</p>
+            {% endif %}
+        </div>
+
+    </div>
+{% endblock %}

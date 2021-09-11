@@ -1,0 +1,31 @@
+#blog-conteiner {
+    padding: 50px 25% 50px 15%;
+}
+
+#add-post-link {
+    position: fixed;
+    display: inline;
+    margin: 0px 0px 0px -160px;
+}
+
+button {
+    float:right;
+    display:block;
+    margin-right:0px;
+    clear:left;
+}
+
+input[id="id_title"] {
+    width: 100%;
+}
+
+textarea[id="id_text"] {
+    width: 100%;
+    height: 40%;
+}
+
+.post-edit-button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+}

@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div id="blog-conteiner">
+        {% if user.is_superuser %}
+            <h5 id="add-post-link"><a href="{% url 'post_new' %}">add new post</a></h5>
+        {% endif %}
+
+        {% for post in posts %}
+        <div class="post">
+            <h1 class="post_title"><a  href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p class="post_text">{{ post.text|linebreaksbr }}</p>
+            <div class="date">
+                <p class="pub_date">Published: {{ post.published_date }}</p>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    
+{% endblock %}

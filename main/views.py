@@ -12,3 +12,7 @@ def biography(request):
 
 def contacts(request):
     return HttpResponse("<h1/>CONTACTS<h1>")
+
+
+def login(request):
+    return render(request, 'main/login.html')

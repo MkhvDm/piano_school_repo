@@ -5,8 +5,6 @@
         <meta charset="UTF-8">
         <title>SEYMOUR Piano Studio</title>
         <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
-<!--        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
-<!--        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">-->
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% block style %}
         {% endblock %}
@@ -19,6 +17,10 @@
                 <h5><a href="/blog">blog</a></h5>
                 <h5><a href="/contacts">contacts</a></h5>
                 <h5><a href="/trial">first lesson</a></h5>
+                <h5><a href="/login">login</a></h5>
+                {% if user.is_superuser %}
+                    <h6><a href="/admin">admin</a></h6>
+                {% endif %}
             </div>
             
         </div>

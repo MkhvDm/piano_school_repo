@@ -11,8 +11,8 @@ body {
 .page-header {
     width: 100%;
     margin: 0;
-    padding: 8px;
-    font-size: x-large;
+    padding: 10px;
+    font-size: xx-large;
     background-color: #cfcfd1;
 
     position: fixed;
@@ -30,7 +30,7 @@ body {
     display: inline-block;
 }
 
-.nav-bar > h5, h6 {
+.nav-bar > h5 {
     margin: 0;
     padding-left: 10px;
     display: inline-block;
