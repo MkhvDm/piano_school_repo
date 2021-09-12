@@ -7,11 +7,11 @@ def trial(request):
 
 
 def biography(request):
-    return HttpResponse("<h1/>BIO<h1>")
+    return render(request, 'main/bio.html')
 
 
 def contacts(request):
-    return HttpResponse("<h1/>CONTACTS<h1>")
+    return render(request, 'main/contacts.html')
 
 
 def login(request):

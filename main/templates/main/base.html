@@ -17,7 +17,12 @@
                 <h5><a href="/blog">blog</a></h5>
                 <h5><a href="/contacts">contacts</a></h5>
                 <h5><a href="/trial">first lesson</a></h5>
-                <h5><a href="/login">login</a></h5>
+                {% if user.is_authenticated %}
+                    <h5><a href="/account">account</a></h5>
+                {% else %}
+                    <h5><a href="/account/login">account</a></h5>
+                    <h5><a href="/account/registration">registration</a></h5>
+                {% endif %}
                 {% if user.is_superuser %}
                     <h6><a href="/admin">admin</a></h6>
                 {% endif %}
