@@ -7,12 +7,13 @@
 
 {% block content %}
 
-    <div id="login-conteiner">
-        <h2>Login...</h2>
-        <form class="site-form" action="/account/login/" method="post">
+    <div id="sign-up-conteiner">
+        <h2>Sign up</h2>
+        
+        <form class="site-form" action="/account/sign_up/" method="post">
             {% csrf_token %}
-            {{ login_form }}
-            <input type="submit" value="login">
+            {{ sign_up_form }}
+            <input type="submit" value="Signup">
         </form>
 
     </div>

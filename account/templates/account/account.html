@@ -8,7 +8,15 @@
 {% block content %}
 
     <div id="account-conteiner">
-        <h2>Account template</h2>
+        <h2>Your Account</h2>
+        {% if user.is_authenticated %} 
+            <h4>your account</h4>
+            <!-- <p>{{ username }}</p> -->
+        {% else %}
+            <p>Please login or sign up! </p>
+            <h5><a href="/account/login">login</a></h5>
+            <h5><a href="/account/sign_up">sign up</a></h5>
+        {% endif %}
     </div>
     
 {% endblock %}

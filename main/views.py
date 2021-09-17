@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def trial(request):
-    return HttpResponse("<h1/>Trial lesson<h1>")
+    return render(request, 'main/trial.html')
 
 
 def biography(request):
