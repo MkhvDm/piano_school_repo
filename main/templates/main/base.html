@@ -19,6 +19,10 @@
                 <h5><a href="/trial">first lesson</a></h5>
                 {% if user.is_authenticated %}
                     <h5><a href="/account">account</a></h5>
+                    <form id="logout-link" action="{% url 'account:logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form>
                 {% else %}
                     <h5><a href="/account/login">login</a></h5>
                     <h5><a href="/account/sign_up">sign up</a></h5>
