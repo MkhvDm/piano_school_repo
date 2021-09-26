@@ -13,6 +13,3 @@ def biography(request):
 def contacts(request):
     return render(request, 'main/contacts.html')
 
-
-def login(request):
-    return render(request, 'main/login.html')

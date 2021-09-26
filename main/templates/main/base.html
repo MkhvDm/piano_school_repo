@@ -15,13 +15,13 @@
                 <h3><a href="/"> Seymour Piano Studio </a></h3>
                 <h5><a href="/biography">biography</a></h5>
                 <h5><a href="/blog">blog</a></h5>
-                <h5><a href="/contacts">contacts</a></h5>
+                <h5><a href="/contacts">contact</a></h5>
                 <h5><a href="/trial">first lesson</a></h5>
                 {% if user.is_authenticated %}
                     <h5><a href="/account">account</a></h5>
                     <form id="logout-link" action="{% url 'account:logout' %}" method="post">
                         {% csrf_token %}
-                        <button type="submit">Logout</button>
+                        <button type="submit">logout</button>
                     </form>
                 {% else %}
                     <h5><a href="/account/login">login</a></h5>

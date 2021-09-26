@@ -1,0 +1,10 @@
+#photo-in-bio {
+    width: 350px;
+    height: auto;
+    float: right;
+    margin-left: 10px;
+}
+ 
+p {
+    font-size: large;
+}

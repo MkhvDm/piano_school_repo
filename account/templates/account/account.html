@@ -9,9 +9,13 @@
 
     <div id="account-conteiner">
         {% if user.is_authenticated %}
-            <h2>Your Account</h2>
-            <p>{{ username }}</p>
-            
+            <h2>Your Account &nbsp;&nbsp;&nbsp;&nbsp; <a href="{% url 'account:settings' %}">settings</a> </h2> 
+            <p>Username: {{ user.get_username }}</p>
+            <p>User ID: {{ user.pk }}</p>
+            <p>First name: {{ user.first_name }}</p>
+            <p>Last name: {{ user.last_name }}</p>
+            <p>Email: {{ user.email }}</p>
+
         {% else %}
             <p>Please login or sign up! </p>
             <h5><a href="/account/login">login</a></h5>

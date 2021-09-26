@@ -1,19 +1,21 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-<!-- {% block style %}
-    <link rel="stylesheet" href="{% static 'css/bio.css' %}">
-{% endblock %} -->
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock %}
 
 {% block content %}
 
-    <div id="blog-conteiner">
-        <p>
+    <div id="bio-conteiner">
+        <h2>Biography</h2>
+        <img id="photo-in-bio" src="{% static 'img/Zarema.jpg' %}" ALIGN="top">
+        <p id="bio">
             &nbsp;&nbsp;&nbsp;&nbsp;Zarema Seymour was born in Pskov, Russia.
             She began taking Piano lessons as well as Music Theory, Literature, and Choir at a local music school. 
-            There she had her first experience as a Piano Soloist, and an Accompanist for the school orchestra. 
+            There she had her first experience as a Piano Soloist, and an Accompanist for the school orchestra. <br> 
             &nbsp;&nbsp;&nbsp;&nbsp;Upon successful completion of music school, Zarema was accepted to the Pskov Regional Music College. 
-            There she majored in Piano Performance. 
+            There she majored in Piano Performance. <br>
             &nbsp;&nbsp;&nbsp;&nbsp;After graduation, Zarema decided to continue her education at St. Petersburg University 
             as a Music major with emphasis on Pedagogy. In 1995, she received her Masters degree in Music Education. 
             At the time, she was working as a Piano Teacher, and as an Accompanist for Cello and Violin Students as well 

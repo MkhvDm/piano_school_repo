@@ -1,7 +1,10 @@
+.content-container {
+    padding: 89px 0px 50px 0px;
+}
 
 .piano-image {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 17%;
     margin-right: auto;
 }
 
@@ -15,7 +18,7 @@
 .quote-div {
     display: inline-block;
     padding-right: 30px;
-    padding-left: 60px;
+    padding-left: 0px;
 }
 
 figure {
@@ -44,6 +47,6 @@ blockquote p::after {
 #teaching-philosophy {
     font-size: large;
     /* width: 90%; */
-    padding: 50px 7% 50px 13%;
+    padding: 50px 20% 50px 17%;
 }
 

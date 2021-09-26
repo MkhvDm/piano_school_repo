@@ -6,7 +6,28 @@ body {
     padding: 0 0;
     margin: auto;
     width: 100%;
+
+    /* overflow-y: scroll;
+    background-color: #ffffff;
+    width: 200px;
+    height: 200px; */
 }
+
+body::-webkit-scrollbar {
+    width: 9px;
+    background-color: #b1b1b1;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #c7914b;
+    background: linear-gradient(180deg, #a06b2f, #e6bc8c); 
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.2) inset;
+    background-color: #f9f9fd;
+}
+
+
 
 .page-header {
     width: 100%;
@@ -19,7 +40,9 @@ body {
     z-index: 1000;
 }
 .content-container {
-    padding-top: 89px;
+    /* padding-top: 89px; */
+    padding: 89px 7% 50px 13%;
+    min-height: 400px;
 }
 
 .nav-bar > h3 {
@@ -30,12 +53,16 @@ body {
     display: inline-block;
 }
 
-.nav-bar > h5, h6 {
+.nav-bar > h5, h6, form {
     margin: 0;
     padding-left: 10px;
     display: inline-block;
 }
 
+.nav-bar > form {
+    float: right;
+    padding-right: 40px;
+}
 
 a {
     color: #505050;
