@@ -1,6 +1,7 @@
 test_ignore.txt
 workspace.code-workspace
 /.idea
+*.bak
 
 *.log
 *.pot

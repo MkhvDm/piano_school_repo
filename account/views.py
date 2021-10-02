@@ -51,8 +51,13 @@ def logout_v(request):
 
 
 def settings(request):
-
-    return redirect('home')
+    if request.method == 'POST' and request.user.is_authenticated:
+        change_first_name_form = AuthenticationForm(data=request.POST)
+        if change_first_name_form.is_valid():
+            user = change_first_name_form.get_user()
+    return redirect('account:account')
+    # return render(request, 'account/login.html', {'login_form': login_form})
+    # return redirect('home')
 
 
 class LoginView(View):

@@ -150,3 +150,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # SECURE_HSTS_SECONDS             = None
 # SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
 # SECURE_FRAME_DENY               = False
+
+
+# Heroku: Update database configuration from $DATABASE_URL.
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)

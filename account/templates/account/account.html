@@ -3,16 +3,36 @@
 
 {% block style %}
     <link rel="stylesheet" href="{% static 'css/account.css' %}">
+    <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
 
 {% block content %}
-
+ 
     <div id="account-conteiner">
         {% if user.is_authenticated %}
-            <h2>Your Account &nbsp;&nbsp;&nbsp;&nbsp; <a href="{% url 'account:settings' %}">settings</a> </h2> 
+            <h2>Your Account &nbsp;&nbsp;&nbsp;&nbsp; <!-- <a href="{% url 'account:settings' %}">settings</a>--> </h2> 
             <p>Username: {{ user.get_username }}</p>
             <p>User ID: {{ user.pk }}</p>
             <p>First name: {{ user.first_name }}</p>
+            
+
+            <!-- <form class="site-form" action="/account/settings/" method="post">
+                {% csrf_token %}
+                {{ change_first_name_form }}
+                <input type="submit" value="Save">
+            </form> -->
+
+            <button class="open-button" onclick="openForm()">change</button>
+            <div class="form-first-name" id="accountForm">
+                <form method="POST" class="form-container">{% csrf_token %}
+                    <label for="fstnm"><b>New First name:</b></label>
+                    <input type="first_name" placeholder="Enter new First name" name="fstnm" required><br>
+                
+                    <button type="submit" class="btn">Ok</button>
+                    <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+
             <p>Last name: {{ user.last_name }}</p>
             <p>Email: {{ user.email }}</p>
 

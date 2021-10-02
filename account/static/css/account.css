@@ -1,3 +1,86 @@
 p {
     font-size: 18px;
 }
+
+/* {box-sizing: border-box;} */
+
+.account {
+    width: 70%;
+    min-width: 300px;
+}
+
+p {
+    margin-right: 100px;
+    /* display: inline-block; */
+}
+
+/* Кнопка, используемая для открытия контактной формы - фиксируется в нижней части страницы */
+.open-button {
+  background-color: rgb(141, 141, 141);
+  color: white;
+  padding: 6px 6px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.8;
+  font-size: medium;
+  display: inline-block;
+  /* position: fixed; */
+  /* bottom: 23px; */
+  /* right: 28px; */
+  /* width: 280px; */
+}
+
+/* Всплывающая форма-скрыта по умолчанию */
+.form-first-name {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Добавить стили для контейнера формы */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Поля ввода полной ширины */
+.form-container input[type=text], .form-container input[type=first_name] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Когда входы получают фокус, сделайте что-нибудь */
+.form-container input[type=first_name]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Установите стиль для кнопки отправить/войти */
+.form-container .btn {
+  background-color: #dddddd;
+  color: rgb(97, 97, 97);
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Добавить красный цвет фона для кнопки "Отмена" */
+.form-container .cancel {
+  background-color: rgb(214, 214, 214);
+}
+
+/* Добавить некоторые эффекты наведения на кнопки */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

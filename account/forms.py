@@ -3,6 +3,12 @@ from django import forms
 from django.contrib.auth.models import User
 
 
+class ChangeAcc(forms.ModelForm):
+    '''
+    Change first name, last name,
+    '''
+
+
 class LoginForm(forms.ModelForm):
 
     password = forms.CharField(widget=forms.PasswordInput)
