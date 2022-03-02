@@ -1,0 +1,30 @@
+.content-conteiner {
+    padding: 89px auto 50px auto !important; /* not worked */
+}
+
+#timepad-conteiner {
+    width: 100%;
+    
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+table {
+    margin: 0 auto;
+    background-color: rgb(238, 238, 238);
+}
+
+td.monday, td.tuesday, td.wednesday, td.thursday, td.friday, td.saturday, td.sunday, td.noday {
+    text-align: center;
+    width: 105px;
+    height: 85px;
+
+}
+
+h3 {
+    margin: 0;
+}
+
+td > a {
+    font-size: larger;
+}

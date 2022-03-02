@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/timepad.css' %}" />
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %} {% block content %}
+
+<div id="timepad-conteiner">
+  <h3>Events for {{user.get_username}} for a {{month_str}} {{year}}</h3>
+  <p><a href="/timepad/{{ year }}/{{ month_num }}"> Back to Timepad</a></p>
+
+  {% for event in events %}
+  <div class="event">
+      <h1 class="event_title">{{ event.title }}</h1>
+      <p class="event_desc">{{ event.description|linebreaksbr }}</p>
+      <p>Teacher ID: {{event.teacher_id}} </p>
+      <div class="date">
+          <p class="start_date">start: {{ event.start_time }}</p>
+      </div>
+      <ul>Students IDs:
+          {% for user in event.student_ids.all %}
+            <li> {{user}} </li>
+          {% endfor %}
+      </ul>
+  </div>
+  {% endfor %}
+
+</div>
+<footer>
+    <center>
+        <p>Copyright (c) {{ current_year }}</p>
+    </center>
+</footer>
+
+{% endblock %}

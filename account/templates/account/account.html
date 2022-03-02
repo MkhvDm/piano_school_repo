@@ -11,30 +11,35 @@
     <div id="account-conteiner">
         {% if user.is_authenticated %}
             <h2>Your Account &nbsp;&nbsp;&nbsp;&nbsp; <!-- <a href="{% url 'account:settings' %}">settings</a>--> </h2> 
-            <p>Username: {{ user.get_username }}</p>
-            <p>User ID: {{ user.pk }}</p>
-            <p>First name: {{ user.first_name }}</p>
-            
 
-            <!-- <form class="site-form" action="/account/settings/" method="post">
-                {% csrf_token %}
-                {{ change_first_name_form }}
-                <input type="submit" value="Save">
-            </form> -->
-
-            <button class="open-button" onclick="openForm()">change</button>
-            <div class="form-first-name" id="accountForm">
-                <form method="POST" class="form-container">{% csrf_token %}
-                    <label for="fstnm"><b>New First name:</b></label>
-                    <input type="first_name" placeholder="Enter new First name" name="fstnm" required><br>
+            <div class="grid-div">
+                <div>Username:</div>   <div>{{ user.get_username }}</div>
+                <div>User ID:</div>    <div>{{ user.pk }}</div>
                 
-                    <button type="submit" class="btn">Ok</button>
-                    <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
-                </form>
-            </div>
+                <div>First name:</div> <div><button class="open-button" onclick="openForm()">{% if user.first_name%} {{ user.first_name }} {% else %} set {%endif%}</button></div>
+                <div class="account-form" id="FirstNameForm">
+                    <form action="/account/settings/" method="POST" class="form-container">{% csrf_token %}
+                        <label for="new_first_name"><b>Change first name:</b></label>
+                        <input type="first_name" placeholder="Enter new First name" name="new_first_name" required><br>
+                    
+                        <button type="submit" class="btn">Ok</button>
+                        <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
+                
+                <div>Last name:</div><div><button class="open-button" onclick="openForm_last()">{% if user.last_name%} {{ user.last_name }} {% else %} set {%endif%}</button></div>
+                <div class="account-form" id="LastNameForm">
+                    <form action="/account/settings/" method="POST" class="form-container">{% csrf_token %}
+                        <label for="new_last_name"><b>Change last name:</b></label>
+                        <input type="last_name" placeholder="Enter new Last name" name="new_last_name" required><br>
+                    
+                        <button type="submit" class="btn">Ok</button>
+                        <button type="submit" class="btn cancel" onclick="closeForm_last()">Close</button>
+                    </form>
+                </div>
 
-            <p>Last name: {{ user.last_name }}</p>
-            <p>Email: {{ user.email }}</p>
+                <div>Email:</div><div>{{user.email}}</div>
+            </div>
 
         {% else %}
             <p>Please login or sign up! </p>

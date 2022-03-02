@@ -1,0 +1,44 @@
+{% extends 'main/base.html' %} 
+{% load static %} 
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/timepad.css' %}" />
+<!-- <script src="{% static 'js/script.js' %}"></script> -->
+{% endblock %} {% block content %}
+
+<div id="timepad-conteiner">
+  {% if user.is_authenticated %}
+
+    <h3>Events for {{user.get_username}} on {{month_str}} {{day}} {{year}}</h3>
+    <p><a href="/timepad/{{ year }}/{{ month_num }}"> Back to Timepad</a></p>
+
+    <div class="event">
+      {% if events.exists %}
+        {% for event in events %}
+        <div class="event">
+          <h1 class="event_title">{{ event.title }}</h1>
+          <p class="event_desc">{{ event.description|linebreaksbr }}</p>
+          <p>Teacher ID: {{event.teacher_id}} </p>
+          <div class="date">
+              <p class="start_date">start: {{ event.start_time }}</p>
+          </div>
+          <ul>Students IDs:
+            {% for user in event.student_ids.all %}
+              <li> {{user}} </li>
+            {% endfor %}
+          </ul>
+      </div>
+        {% endfor %}
+      {% else %}
+        <p>There are no events on day!</p>
+      {% endif %} <!-- {{events}} -->
+    </div>
+  {% endif %}
+</div>
+<footer>
+    <center>
+        <p>Copyright (c) {{ current_year }}</p>
+    </center>
+</footer>
+
+{% endblock %}

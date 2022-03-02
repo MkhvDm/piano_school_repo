@@ -1,13 +1,18 @@
-p {
-    font-size: 18px;
+.account {
+  width: 70%;
+  min-width: 300px;
+}
+
+.grid-div {
+  font-size: 18px;
+  display: grid;
+  /* grid-template-columns: 7% 20%; */
+  /* grid-template-columns: minmax(50px, 100px); */
+/* grid-template-columns: fit-content(40%); */
+grid-template-columns: repeat(2, 100px);
 }
 
 /* {box-sizing: border-box;} */
-
-.account {
-    width: 70%;
-    min-width: 300px;
-}
 
 p {
     margin-right: 100px;
@@ -32,7 +37,7 @@ p {
 }
 
 /* Всплывающая форма-скрыта по умолчанию */
-.form-first-name {
+.account-form {
   display: none;
   position: fixed;
   bottom: 0;
@@ -49,7 +54,7 @@ p {
 }
 
 /* Поля ввода полной ширины */
-.form-container input[type=text], .form-container input[type=first_name] {
+.form-container input[type=text], .form-container input[type=first_name], .form-container input[type=last_name] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -58,7 +63,7 @@ p {
 }
 
 /* Когда входы получают фокус, сделайте что-нибудь */
-.form-container input[type=first_name]:focus {
+.form-container input[type=first_name]:focus, .form-container input[type=last_name]:focus {
   background-color: #ddd;
   outline: none;
 }

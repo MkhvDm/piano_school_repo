@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %} {% load static %} {% block style %}
+<link rel="stylesheet" href="{% static 'css/timepad.css' %}" />
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %} {% block content %}
+
+<div id="timepad-conteiner">
+  <h3>Timepad for a {{month_str}} {{year}}</h3>
+  <div>
+    <a href="{% url 'timepad:timepad' year=prev_year_num month=prev_month_num %}"> &larr; prev month</a> &nbsp
+    <a href="{% url 'timepad:timepad' year=next_year_num month=next_month_num %}"> next month &rarr;</a> &nbsp &nbsp
+    <a href="{% url 'timepad:all_events' year=year month=month_num %}"> Go to Events in {{month_str}} {{year}}</a>
+  </div>
+    {{ cal|safe }} 
+  {{ f_month_name|safe }}
+</div>
+<footer>
+    <center>
+        <p>Copyright (c) {{ current_year }}</p>
+    </center>
+</footer>
+
+{% endblock %}
+

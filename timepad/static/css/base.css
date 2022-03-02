@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+
+body {
+    background-color: #ffffff;
+    font-family: 'Benne', serif;
+    padding: 0 0;
+    margin: auto;
+    width: 100%;
+}
+
+.page-header {
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+    font-size: x-large;
+    background-color: #cfcfd1;
+
+    position: fixed;
+    z-index: 1000;
+}
+.content-container {
+    padding-top: 89px;
+}
+
+.nav-bar > h3 {
+    margin: 0;
+    padding-right: auto;
+    padding-left: 10px;
+    /* display: block; */
+    /* display: inline-block; */
+}
+
+.nav-bar > h5, h6 {
+    margin: 0;
+    padding-left: 10px;
+    display: inline-block;
+}
+
+
+a {
+    color: #505050;
+    text-decoration: none;
+}
+a:hover{
+    color: #754200;
+}
+a:active {
+    color: #cc7400;
+}

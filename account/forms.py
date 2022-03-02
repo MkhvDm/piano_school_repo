@@ -3,10 +3,17 @@ from django import forms
 from django.contrib.auth.models import User
 
 
-class ChangeAcc(forms.ModelForm):
-    '''
-    Change first name, last name,
-    '''
+class ChangeLastName(forms.ModelForm):
+    def __init__(self, *args, **kwargs):
+        super().__init__(self, *args, **kwargs)
+        self.fields['Last name'].label = 'Last name'
+
+    class Meta:
+        last_name = forms.CharField(
+            label="Last name",
+            max_length=100,
+            strip=True
+        )
 
 
 class LoginForm(forms.ModelForm):

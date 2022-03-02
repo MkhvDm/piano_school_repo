@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'main',
     'blog',
     'account',
+    'timepad',
 ]
 
 MIDDLEWARE = [
@@ -116,7 +117,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False#True
 
 
 # Static files (CSS, JavaScript, Images)
@@ -150,6 +151,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # SECURE_HSTS_SECONDS             = None
 # SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
 # SECURE_FRAME_DENY               = False
+
+# USER DEFINED:
+SUNDAY_FIRSTWEEKDAY = False
 
 
 # Heroku: Update database configuration from $DATABASE_URL.
